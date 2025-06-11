@@ -65,7 +65,7 @@ if (caseStudyUrl.includes('zap-app')) {
 } else if (caseStudyUrl.includes('qr-code-auto')) {
     caseStudyImageSrc = 'auto/autocase1.png';
 } else if (caseStudyUrl.includes('future-you')) {
-    caseStudyImageSrc = 'futureyouimg/frame 14.png';
+    caseStudyImageSrc = 'futureyouimg/futureyou1.png';
 } else if (caseStudyUrl.includes('focus-read')) {
     caseStudyImageSrc = 'focusread/Focusread1.png';
 } else {
