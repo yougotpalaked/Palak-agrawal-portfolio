@@ -63,7 +63,7 @@ if (caseStudyUrl.includes('zap-app')) {
 } else if (caseStudyUrl.includes('midair')) {
     caseStudyImageSrc = 'midair/midaircase1.png';
 } else if (caseStudyUrl.includes('qr-code-auto')) {
-    caseStudyImageSrc = 'auto/autocase.png';
+    caseStudyImageSrc = 'auto/autocase1.png';
 } else if (caseStudyUrl.includes('future-you')) {
     caseStudyImageSrc = 'futureyouimg/frame 14.png';
 } else if (caseStudyUrl.includes('focus-read')) {
