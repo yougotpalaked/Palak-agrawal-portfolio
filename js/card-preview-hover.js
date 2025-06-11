@@ -67,7 +67,7 @@ if (caseStudyUrl.includes('zap-app')) {
 } else if (caseStudyUrl.includes('future-you')) {
     caseStudyImageSrc = 'futureyouimg/futureyou1.png';
 } else if (caseStudyUrl.includes('focus-read')) {
-    caseStudyImageSrc = 'focusread/Focusread1.png';
+    caseStudyImageSrc = 'focusread/focusread11.png';
 } else {
     caseStudyImageSrc = bar.querySelector('.project-image').src;
 }
