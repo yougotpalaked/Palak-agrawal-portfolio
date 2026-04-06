@@ -27,7 +27,7 @@ function initHorizontalScroll() {
         });
     });
 }
-}
+
 
 function createScrollIndicators(worksGrid, count) {
     // Create container for scroll indicators

@@ -1,273 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palak Agrawal | UX/UI Designer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/process-timeline.css">
-    <link rel="stylesheet" href="css/dizzy-effect.css">
-    <link rel="stylesheet" href="css/process-index.css">
-    <link rel="stylesheet" href="css/scroll-animation.css">
-    <link rel="stylesheet" href="css/card-preview-hover.css">
-    <link rel="preload" as="image" href="zap/1.png">
-<link rel="preload" as="image" href="ZAPB/Frame 15.png">
-<link rel="preload" as="image" href="midair/midaircase1.png">
-<link rel="preload" as="image" href="auto/autocase.png">
-<link rel="preload" as="image" href="futureyouimg/Frame 14.png">
-<link rel="preload" as="image" href="focusread/focusread1.png">
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palak Agrawal | UX/UI Designer</title>
+  <link rel="stylesheet" href="css/palak-dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="" alt="">
-                <a href="index.html">☘️PaLUCK</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="works.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="theme-toggle">
-                    <button id="darkModeToggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-stacked-content">
-            <!-- Eyes centered and stacked on top -->
-            <div class="eye-container">
-                <div class="eye-wrapper">
-                    <div class="shadow"></div>
-                    <div class="eye">
-                        <div class="pupil"></div>
-                        <div class="reflection"></div>
-                    </div>
-                </div>
-                <div class="eye-wrapper">
-                    <div class="shadow"></div>
-                    <div class="eye">
-                        <div class="pupil">
-                            <div class="pupil-reflection"></div>
-                        </div>
-                        <div class="reflection"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Text content stacked below eyes -->
-            <div class="hero-content">
-                <h1 class="hello-text" style="font-weight: 600; ;">Hello!</h1>
-                <h1 class="name-text" style="font-weight: 400; ;">I am Palak Agrawal</h1>
-                <p >I'm always looking around for problems to solve</p>
-            </div>
-            <div>
-                <span class="scroll-text"></span>
-                <span class="scroll-icon">
-                    <i class="fas fa-chevron-down"></i>
-                </span>
+  <nav class="topnav">
+    <a class="topnav-logo" href="index.html">Palak Agrawal</a>
+    <ul class="topnav-pills">
+      <li><a href="index.html" class="active">Dashboard</a></li>
+      <li><a href="works.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="topnav-right">
+      <a href="resume/Palak-Resume-UXUI.pdf" target="_blank" title="Resume"><i class="fas fa-file-alt"></i></a>
+      <a href="https://www.linkedin.com/in/palak-agrawal-aaa227206/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </nav>
 
-            </div>
-        </div>
-    </section>
+  <main class="bento">
 
-    <div class="process-led">
-    <section class="ux-process">
-        <h2 style="margin-bottom: 1.5rem;font-size: 3.1rem;">Process-led projects</h2>
-        <p class="section-description" style="padding-bottom:40px; padding-top:-50px;">Each project is highlighted by the skill it challenged and strengthened the most.</p>
+    <!-- HELLO CARD -->
+    <div class="card card-hello">
+      <h1>Hello<br><em>Stranger</em></h1>
+      <p class="subtitle">I'm always looking around for problems to solve — and I found a home in design.</p>
+      <div class="code-block">
+        let designer = palak.current();<br>
+        &gt; The terminal is open.<br>
+        Type nothing. Just explore._
+      </div>
     </div>
 
+    <!-- DESIGN HOURS CARD -->
+    <div class="card card-stats">
+      <div class="card-label"><i class="fas fa-clock"></i>&nbsp; Design Hours</div>
 
-        <div class="process-stage align-right">
-            <div>
-            <h3></h3>
-            <h3>1. Research & Empathize</h3>
-            </div>
-            <p style="text-align: left;">Through deep research and empathy, this project shapes user-focused QR code solutions.</p>
-        </div>
-        <div class="process-timeline flipped";>
-            <div class="project-bar" data-aos="fade-up">
-                <div class="project-banner">
-                    <img src="auto/autoqr2.png" alt="QR Code in Auto" class="project-image">
-                    <img src="auto/autoBanner2.png" alt="QR Code in Auto Hover" class="project-image-hover">
-                </div>
-                <div class="project-info">
-                    <div class="text-content">
-                        <h4>QR Code in Auto</h4>
-                        <p>A UX Research Study on Effective QR Code Placement</p>
-                    </div>
-                </div>
-                <a href="qr-code-auto.html" class="project-link"></a>
-            </div>
-        </div>
+      <div class="gauge-wrap">
+        <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 85 A72 72 0 0 1 152 85" stroke="#222" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <path d="M8 85 A72 72 0 0 1 95 15" stroke="url(#g1)" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <circle cx="95" cy="15" r="6" fill="white"/>
+          <defs>
+            <linearGradient id="g1" x1="8" y1="85" x2="95" y2="15" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#4ade80"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="stat-num" id="hourCount">0</div>
+        <div class="stat-unit">Hours</div>
+      </div>
+
+      <div class="stats-footer">
+        <span>INDIA<br><span style="font-size:9px;color:#3a3a3a;">24.0°N 78.0°E</span></span>
+        <span style="text-align:right">DESIGN<br>2023 — 2025</span>
+      </div>
     </div>
-    
-        
-        <!-- Define & Ideate -->
-        <div class="process-stage align-left">
-            <div>
-            <h3></h3>
-            <h3>2. Define and ideate</h3>
-        </div>
-            <p style="text-align: left;">Defining key customer pain points and ideating smart cart solutions to improve the offline shopping experience.</p>
-        </div>
-        <div class="process-timeline">
-            <div class="project-bar align-right" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-banner">
-                    <img src="zap/ChatGPT Image Apr 23, 2025, 08_14_38 PM.png" alt="ZAP App" class="project-image">
-                    <img src="zap/DeWatermark.ai_17446197430s72.png" alt="ZAP App Hover" class="project-image-hover">
-                </div>
-                <div class="project-info">
-                    <div class="text-content">
-                        <h4>ZAP App</h4>
-                        <p>Solving offline shopping friction by a
-                            smart,cart app </p>
-                    </div>
-                </div>
-                <a href="zap-app.html" class="project-link"></a>
-            </div>
 
+    <!-- SKILL MATRIX CARD -->
+    <div class="card card-skills">
+      <div class="skills-head">
+        <div class="card-label"><i class="fas fa-chart-bar"></i>&nbsp; Skill Matrix</div>
+        <div class="skills-tools-col">
+          <div class="card-label" style="justify-content:flex-end; margin-bottom:2px;">TOOL</div>
+          Figma<br>Adobe CC<br>Framer<br>HTML / CSS<br>Miro
         </div>
-        
-        <!-- Prototype -->
-        <div class="process-stage align-right">
-            <div>
-            <h3></h3>
-            <h3>3. Prototype</h3>
-        </div>
-            <p style="text-align: left;">Translating business concepts into prototypes for a retail management system informed by Zap insights.</p>
-        </div>
-        <div class="process-timeline flipped">
-            <div class="project-bar" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-banner">
-                    <img src="ZAPB/Screenshot 2025-04-18 001848.png" alt="ZAP Business Portal" class="project-image">
-                    <img src="ZAPB/bannerportal.png" alt="ZAP Business Portal Hover" class="project-image-hover">
-                </div>
-                <div class="project-info">
-                    <div class="text-content">
-                        <h4>ZAP Business Portal</h4>
-                        <p>Tackling operational inefficiencies with a data-driven RMS</p>
-                    </div>
-                </div>
-                <a href="zap-business-portal.html" class="project-link"></a>
-            </div>
+      </div>
 
-        </div>
-        
-        <!-- Design -->
-        <div class="process-stage align-left">
-            <div>
-            <h3></h3>
-            <h3>4. Design</h3>
-        </div>
-            <p style="text-align: left;">designing intuitive and visually compelling interfaces tailored for in-transit experiences.</p>
-        </div>
-        <div class="process-timeline">
-            <div class="project-bar align-right" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-banner">
-                    <img src="midair/bannermidair.png" alt="Midair" class="project-image">
-                    <img src="midair/ChatGPT Image Apr 23, 2025, 09_01_30 PM.png" alt="Midair app hover" class="project-image-hover">
-                </div>
-                <div class="project-info">
-                    <div class="text-content">
-                        <h4>Midair</h4>
-                        <p>Reimagining travel downtime by connecting flyers through an in-transit social platform.</p>
-                    </div>
-                </div>
-                <a href="midair.html" class="project-link"></a>
-            </div>
+      <div class="skill-row"><span class="skill-name">UX Research</span><span class="skill-badge">●</span></div>
+      <div class="skill-row"><span class="skill-name">UI Design</span><span class="skill-badge">●</span></div>
+      <div class="skill-row"><span class="skill-name">Interaction Design</span><span class="skill-badge">●</span></div>
+      <div class="skill-row"><span class="skill-name">Prototyping</span><span class="skill-badge">●</span></div>
+      <div class="skill-row"><span class="skill-name">User Testing</span><span class="skill-badge">●</span></div>
+      <div class="skill-row"><span class="skill-name">Visual Design</span><span class="skill-badge">●</span></div>
+      <div class="skill-row"><span class="skill-name">Design Systems</span><span class="skill-badge">●</span></div>
 
-        </div>
-        
-        <!-- Test -->
-        <div class="process-stage align-right">
-            <div>
-            <h3></h3>
-            <h3>5. Test</h3>
-        </div>
-            <p style="text-align: left;">Testing an educational app and enhancing usability and user engagement.</p>
-        </div>
-        <div class="process-timeline flipped">
-            <div class="project-bar" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-banner">
-                    <img src="banneru.png" alt="Future You" class="project-image">
-                    <img src="futureyouimg/banneru2.png" alt="Midair app hover" class="project-image-hover">
-                </div>
-                <div class="project-info">
-                    <div class="text-content">
-                        <h4>Future You</h4>
-                        <p>Beta testing the Future U app to improve the user experience</p>
-                    </div>
-                </div>
-                <a href="future-you.html" class="project-link"></a>
-            </div>
+      <div class="skills-bars">
+        <div style="background:#4ade80"></div>
+        <div style="background:#22d3ee"></div>
+        <div style="background:#818cf8"></div>
+        <div style="background:#f472b6"></div>
+        <div style="background:#fb923c"></div>
+        <div style="background:#facc15"></div>
+        <div style="background:#34d399"></div>
+        <div style="background:#c084fc"></div>
+      </div>
+      <div class="skills-note">// self-assessed · always iterating, always improving</div>
+    </div>
 
-        </div>
-        
-        <!-- Develop -->
-        <div class="process-stage align-left">
-            <div>
-            <h3></h3>
-            <h3>6. Develop</h3>
-        </div>
-            <p style="text-align: left;">Developing a browser extension that boosts reading focus
-            </p>
-        </div>
-        <div class="process-timeline">
-            <div class="project-bar align-right" class="no-hover-effect" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-banner">
-                    <img src="focusread/Frame 15.png" alt="Focus Read Web Extension" class="project-image">
-                    <img src="focusread/focusread1.png" alt="Focus Read Hover" class="project-image-hover">
-                </div>
-                <div class="project-info">
-                    <div class="text-content">
-                        <h4>Focus Read Web Extension</h4>
-                        <p>Developed the FocusRead Web extension to enhance reading comprehension</p>
-                    </div>
-                </div>
-                <a href="focus-read.html" class="project-link"></a>
-            </div>
-        </div>
-    </section>
+    <!-- PROJECTS MINI GRID CARD -->
+    <div class="card card-projects">
+      <div class="projects-head">
+        <div class="card-label"><i class="fas fa-th"></i>&nbsp; Featured Projects</div>
+        <a href="works.html" class="btn-pill">View All →</a>
+      </div>
+      <div class="mini-grid">
+        <a href="midair.html" class="mini-card">
+          <img src="midair/bannermidair.png" alt="Midair">
+          <div class="mini-card-body">
+            <div class="mini-tag">App · Social</div>
+            <div class="mini-name">Midair</div>
+          </div>
+        </a>
+        <a href="zap-app.html" class="mini-card">
+          <img src="zap/ChatGPT Image Apr 23, 2025, 08_14_38 PM.png" alt="ZAP App">
+          <div class="mini-card-body">
+            <div class="mini-tag">App · Retail</div>
+            <div class="mini-name">ZAP App</div>
+          </div>
+        </a>
+        <a href="zap-business-portal.html" class="mini-card">
+          <img src="ZAPB/Screenshot 2025-04-18 001848.png" alt="ZAP Business Portal">
+          <div class="mini-card-body">
+            <div class="mini-tag">Dashboard · RMS</div>
+            <div class="mini-name">ZAP Business Portal</div>
+          </div>
+        </a>
+        <a href="qr-code-auto.html" class="mini-card">
+          <img src="auto/autoqr2.png" alt="QR Code Auto">
+          <div class="mini-card-body">
+            <div class="mini-tag">Research · UX</div>
+            <div class="mini-name">QR Code in Auto</div>
+          </div>
+        </a>
+        <a href="future-you.html" class="mini-card">
+          <img src="futureyouimg/banneru2.png" alt="Future You">
+          <div class="mini-card-body">
+            <div class="mini-tag">App · Education</div>
+            <div class="mini-name">Future You</div>
+          </div>
+        </a>
+        <a href="focus-read.html" class="mini-card">
+          <img src="focusread/Frame 15.png" alt="FocusRead">
+          <div class="mini-card-body">
+            <div class="mini-tag">Extension · Productivity</div>
+            <div class="mini-name">FocusRead</div>
+          </div>
+        </a>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <p>Get in touch</p>
-                <a href="mailto:palakagrawal3623@gmail.com">palakagrawal3623@gmail.com</a>
-                <a href="tel:+919050506545">+91 9050506545</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/palak-agrawal-aaa227206/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
+    <!-- ABOUT / CONTACT CARD -->
+    <div class="card card-about">
+      <div>
+        <div class="card-label" style="margin-bottom:14px;"><i class="fas fa-seedling"></i>&nbsp; About Me</div>
+        <div class="about-quote">"and in the middle of it all,<br>I found design."</div>
+        <div class="about-byline">— Palak Agrawal, UX/UI Designer</div>
+        <p class="about-bio">
+          Problem-solver at heart. From charcoal portraits to interaction design — I don't just make things look good, I make them <em style="color:#ccc;">mean something</em>.
+        </p>
+      </div>
+      <div>
+        <div class="contact-section">
+          <div class="contact-label">Get in touch</div>
+          <a href="mailto:palakagrawal3623@gmail.com">palakagrawal3623@gmail.com</a>
+          <a href="tel:+919050506545">+91 9050506545</a>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Palak Agrawal. All rights reserved.</p>
-            <p>ft.Broken Coding Skills</p>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/palak-agrawal-aaa227206/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="resume/Palak-Resume-UXUI.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+          <a href="mailto:palakagrawal3623@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
-    </footer>
+      </div>
+    </div>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-    <script src="js/vertical-scroll.js"></script>
-    <script src="js/trauma-effect.js"></script>
-    <script src="js/process-index.js"></script>
-    <script src="js/card-preview-hover.js"></script>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2025 Palak Agrawal</span>
+    <span>ft. Broken Coding Skills</span>
+  </footer>
+
+  <script>
+    function countUp(el, target, duration) {
+      let start = 0;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        start = Math.min(start + step, target);
+        el.textContent = Math.floor(start).toLocaleString();
+        if (start >= target) clearInterval(timer);
+      }, 16);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      countUp(document.getElementById('hourCount'), 1500, 2000);
+    });
+  </script>
+
 </body>
 </html>
