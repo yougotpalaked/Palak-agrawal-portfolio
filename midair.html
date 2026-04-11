@@ -11,9 +11,43 @@
     <link rel="stylesheet" href="css/palak-dashboard.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/next-project.css">
-    <link rel="stylesheet" href="css/scroll-animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        .cs-hscroll-wrap {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px clamp(24px, 4vw, 80px) 8px;
+        }
+        .cs-hscroll-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow-x: auto;
+            overflow-y: hidden;
+            border-radius: 16px;
+            background: #111;
+            cursor: grab;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #333 transparent;
+        }
+        .cs-hscroll-frame:active { cursor: grabbing; }
+        .cs-hscroll-frame img {
+            height: 100%;
+            width: auto;
+            max-width: none;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+        }
+        .cs-hscroll-hint {
+            text-align: right;
+            font-size: 11px;
+            color: #555;
+            margin-top: 6px;
+            letter-spacing: .05em;
+        }
+    </style>
 </head>
 <body>
     <nav class="topnav">
@@ -52,39 +86,31 @@
 
     <!-- Case Study Content -->
     <section class="case-study-content">
-        
-        <!-- Introduction -->
-       
 
-        <!-- Image Placeholders -->
-        <div class="case-study-images" data-aos="fade-up">
-            <div class="case-study-image">
-                <img src="midair/midaircase1.png" alt="Project image" onload="this.style.display='block'">
+        <!-- Horizontal scroll frame -->
+        <div class="cs-hscroll-wrap">
+            <div class="cs-hscroll-frame" id="hscroll">
+                <img src="midair/Ainterviews.png" alt="Ainterviews x Lenskart case study" draggable="false">
             </div>
-            
-            
-            <div class="video-embed" style="width: 100%; margin: 2rem 0; padding: 0; overflow: hidden;">
-                <video 
-                    width="100%" 
-                    controls 
-                    style="border: none; outline: none; display: block; max-height: 80vh;">
-                    <source src="midair/midairvid.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            
-            
+            <div class="cs-hscroll-hint">scroll to explore →</div>
+        </div>
 
-            <div class="case-study-images" data-aos="fade-up">
-                <div class="case-study-image">
-                    <img src="midair/midaircase2.png" alt="Project image" onload="this.style.display='block'">
-                </div>
-        
+        <!-- Figma Prototype -->
+        <div style="max-width:1400px; margin:0 auto; padding:24px clamp(24px,4vw,80px) 0;">
+            <iframe
+                style="border:none; border-radius:16px; width:100%; aspect-ratio:16/9; display:block;"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeAuuoZQrQb34qzr66z3yqs%2FGP%3Fnode-id%3D249-28228%26viewport%3D-1205%252C-2169%252C0.17%26t%3Dma07Xy2tctZ2vbDP-1%26scaling%3Dcontain%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D249%253A28228"
+                allowfullscreen>
+            </iframe>
+        </div>
 
+        <!-- Video -->
+        <div style="max-width:1400px; margin:0 auto; padding:24px clamp(24px,4vw,80px) 40px;">
+            <video width="100%" controls style="border-radius:16px; display:block; max-height:80vh;">
+                <source src="midair/midairvid.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        
-        <!-- Learnings -->
-      
     </section>
 
     <!-- Next Project Section -->
@@ -102,13 +128,50 @@
         </div>
     </section>
 
-    <!-- Footer -->
-      <footer class="site-footer">
-    <span>© 2026 Palak Agrawal</span>
-    <span>ft. Broken Coding Skills</span>
-  </footer>
+    <footer class="site-footer">
+        <span>© 2026 Palak Agrawal</span>
+        <span>ft. Broken Coding Skills</span>
+    </footer>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script>
+        const frame = document.getElementById('hscroll');
+
+        // redirect vertical wheel to horizontal scroll
+        frame.addEventListener('wheel', e => {
+            e.preventDefault();
+            frame.scrollLeft += e.deltaY + e.deltaX;
+        }, { passive: false });
+
+        // drag to scroll (mouse)
+        let isDown = false, startX, scrollLeft;
+        frame.addEventListener('mousedown', e => {
+            isDown = true;
+            frame.style.cursor = 'grabbing';
+            startX = e.pageX - frame.offsetLeft;
+            scrollLeft = frame.scrollLeft;
+        });
+        document.addEventListener('mouseup', () => {
+            isDown = false;
+            frame.style.cursor = 'grab';
+        });
+        frame.addEventListener('mousemove', e => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - frame.offsetLeft;
+            frame.scrollLeft = scrollLeft - (x - startX) * 1.5;
+        });
+
+        // touch scroll
+        let touchStartX = 0, touchScrollLeft = 0;
+        frame.addEventListener('touchstart', e => {
+            touchStartX = e.touches[0].pageX;
+            touchScrollLeft = frame.scrollLeft;
+        }, { passive: true });
+        frame.addEventListener('touchmove', e => {
+            const dx = touchStartX - e.touches[0].pageX;
+            frame.scrollLeft = touchScrollLeft + dx;
+        }, { passive: true });
+    </script>
 </body>
 </html>
