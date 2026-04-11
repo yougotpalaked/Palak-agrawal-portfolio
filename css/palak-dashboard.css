@@ -128,18 +128,25 @@ nav.topnav {
   min-height: 0; overflow: hidden;
 }
 
-.skills-head {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  margin-bottom: clamp(10px, 1vh, 18px);
+.skills-body {
+  display: flex; gap: 12px;
+  flex: 1; min-height: 0; overflow: hidden;
+}
+
+.skills-left {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: space-between; min-height: 0;
 }
 
 .skills-tools-col {
-  text-align: right; font-size: clamp(9px, 0.7vw, 13px); color: #555; line-height: 2;
+  flex-shrink: 0; text-align: right;
+  font-size: clamp(8px, 0.65vw, 11px); color: #555; line-height: 1.85;
+  white-space: nowrap;
 }
 
 .skill-row {
   display: flex; justify-content: space-between; align-items: center;
-  padding: clamp(3px, 0.4vh, 7px) 0; border-bottom: 1px solid #1e1e1e;
+  padding: clamp(2px, 0.3vh, 5px) 0; border-bottom: 1px solid #1e1e1e;
 }
 
 .skill-name { font-size: clamp(10px, 0.85vw, 16px); color: #ccc; }
